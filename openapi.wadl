@@ -1,0 +1,568 @@
+<?xml version="1.0" encoding="utf-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://wadl.dev.java.net/2009/02">
+  <doc title="KOSCOM FinTech Open API" xml:lang="en">KOSCOM FinTech Open API</doc>
+  <resources base="https://10.10.10.101:8443/open-mock/v1">
+    <resource id="/common/member/verify" path="/common/member/verify">
+      <method id="CommonMemberVerify" name="POST">
+        <doc title="CommonMemberVerify" xml:lang="en">핀테크 서비스 Portal 회원 가입 여부 확인</doc>
+        <request>
+          <param href="#json.vtAccountPortfolioRequest" name="body" required="true">
+            <doc title="body" xml:lang="en">Portal 회원 가입 여부 요청</doc>
+          </param>
+        </request>
+        <response status="400">
+          <doc title="400" xml:lang="en">요청 메시지 오류</doc>
+        </response>
+        <response status="401">
+          <doc title="401" xml:lang="en">권한 오류, 인증 실패</doc>
+        </response>
+        <response status="408">
+          <doc title="408" xml:lang="en">처리시간 초과</doc>
+        </response>
+        <response status="500">
+          <doc title="500" xml:lang="en">처리 중에 에러가 발생</doc>
+        </response>
+        <response status="503">
+          <doc title="503" xml:lang="en">점검 중으로 서비스를 할 수 없는 경우</doc>
+        </response>
+      </method>
+    </resource>
+    <resource id="/common/member/consent" path="/common/member/consent">
+      <method id="CommonMemberConsent" name="POST">
+        <doc title="CommonMemberConsent" xml:lang="en">핀테크 서비스 연계 여부 확인</doc>
+        <request>
+          <param href="#json.vtAccountPortfolioRequest" name="body" required="true">
+            <doc title="body" xml:lang="en">Portal 회원 가입 여부 요청</doc>
+          </param>
+        </request>
+        <response status="400">
+          <doc title="400" xml:lang="en">요청 메시지 오류</doc>
+        </response>
+        <response status="401">
+          <doc title="401" xml:lang="en">권한 오류, 인증 실패</doc>
+        </response>
+        <response status="408">
+          <doc title="408" xml:lang="en">처리시간 초과</doc>
+        </response>
+        <response status="500">
+          <doc title="500" xml:lang="en">처리 중에 에러가 발생</doc>
+        </response>
+        <response status="503">
+          <doc title="503" xml:lang="en">점검 중으로 서비스를 할 수 없는 경우</doc>
+        </response>
+      </method>
+    </resource>
+    <resource id="/account/portfolio/search" path="/account/portfolio/search">
+      <method id="AccountPortfolioSearch" name="POST">
+        <doc title="AccountPortfolioSearch" xml:lang="en">자산 포트폴리오 조회 요청</doc>
+        <request>
+          <param href="#json.portfolioRequest" name="body" required="true">
+            <doc title="body" xml:lang="en">자산 포트폴리오 조회 요청</doc>
+          </param>
+        </request>
+        <response status="400">
+          <doc title="400" xml:lang="en">요청 메시지 오류</doc>
+        </response>
+        <response status="401">
+          <doc title="401" xml:lang="en">권한 오류, 인증 실패</doc>
+        </response>
+        <response status="408">
+          <doc title="408" xml:lang="en">처리시간 초과</doc>
+        </response>
+        <response status="500">
+          <doc title="500" xml:lang="en">처리 중에 에러가 발생</doc>
+        </response>
+        <response status="503">
+          <doc title="503" xml:lang="en">점검 중으로 서비스를 할 수 없는 경우</doc>
+        </response>
+      </method>
+    </resource>
+    <resource id="/account/balance/search" path="/account/balance/search">
+      <method id="AccountBalanceSearch" name="POST">
+        <doc title="AccountBalanceSearch" xml:lang="en">계좌 잔고 조회 요청</doc>
+        <request>
+          <param href="#json.balanceRequest" name="body" required="true">
+            <doc title="body" xml:lang="en">계좌 잔고 조회 요청</doc>
+          </param>
+        </request>
+        <response status="400">
+          <doc title="400" xml:lang="en">요청 메시지 오류</doc>
+        </response>
+        <response status="401">
+          <doc title="401" xml:lang="en">권한 오류, 인증 실패</doc>
+        </response>
+        <response status="408">
+          <doc title="408" xml:lang="en">처리시간 초과</doc>
+        </response>
+        <response status="500">
+          <doc title="500" xml:lang="en">처리 중에 에러가 발생</doc>
+        </response>
+        <response status="503">
+          <doc title="503" xml:lang="en">점검 중으로 서비스를 할 수 없는 경우</doc>
+        </response>
+      </method>
+    </resource>
+    <resource id="/account/transaction/search" path="/account/transaction/search">
+      <method id="AccountTransactionSearch" name="POST">
+        <doc title="AccountTransactionSearch" xml:lang="en">거래내역 조회 요청</doc>
+        <request>
+          <param href="#json.transactionRequest" name="body" required="true">
+            <doc title="body" xml:lang="en">거래내역 조회 요청</doc>
+          </param>
+        </request>
+        <response status="400">
+          <doc title="400" xml:lang="en">요청 메시지 오류</doc>
+        </response>
+        <response status="401">
+          <doc title="401" xml:lang="en">권한 오류, 인증 실패</doc>
+        </response>
+        <response status="408">
+          <doc title="408" xml:lang="en">처리시간 초과</doc>
+        </response>
+        <response status="500">
+          <doc title="500" xml:lang="en">처리 중에 에러가 발생</doc>
+        </response>
+        <response status="503">
+          <doc title="503" xml:lang="en">점검 중으로 서비스를 할 수 없는 경우</doc>
+        </response>
+      </method>
+    </resource>
+    <resource id="/account/interest/search" path="/account/interest/search">
+      <method id="AccountInterestSearch" name="POST">
+        <doc title="AccountInterestSearch" xml:lang="en">관심종목 조회 요청</doc>
+        <request>
+          <param href="#json.interestRequest" name="body" required="true">
+            <doc title="body" xml:lang="en">거래내역 조회 요청</doc>
+          </param>
+        </request>
+        <response status="400">
+          <doc title="400" xml:lang="en">요청 메시지 오류</doc>
+        </response>
+        <response status="401">
+          <doc title="401" xml:lang="en">권한 오류, 인증 실패</doc>
+        </response>
+        <response status="408">
+          <doc title="408" xml:lang="en">처리시간 초과</doc>
+        </response>
+        <response status="500">
+          <doc title="500" xml:lang="en">처리 중에 에러가 발생</doc>
+        </response>
+        <response status="503">
+          <doc title="503" xml:lang="en">점검 중으로 서비스를 할 수 없는 경우</doc>
+        </response>
+      </method>
+    </resource>
+  </resources>
+  <representation id="json.vtAccountPortfolioRequest" mediaType="application/json">
+    <doc title="json.vtAccountPortfolioRequest" xml:lang="en">핀테크 서비스 Portal 회원 가입 여부 확인 요청</doc>
+    <param href="#json.request.common.partner" name="partner" required="true">
+      <doc title="partner" xml:lang="en">오픈API 요청 공통정보 - 파트너</doc>
+    </param>
+    <param href="#json.request.common.header" name="commonHeader" required="true">
+      <doc title="commonHeader" xml:lang="en">오픈API 요청 공통정보 - 파트너</doc>
+    </param>
+    <param href="#json.vtAccountPortfolioRequest.body" name="body" required="true">
+      <doc title="body" xml:lang="en">핀테크 서비스 Portal 회원 가입 여부 확인 바디</doc>
+    </param>
+  </representation>
+  <representation id="json.request.common.partner" mediaType="application/json">
+    <doc title="json.request.common.partner" xml:lang="en">오픈API 요청 공통정보 - 파트너</doc>
+    <param name="comId" type="xsd:string" required="true">
+      <doc title="comId" xml:lang="en">핀테크 기업 코드</doc>
+    </param>
+    <param name="srvId" type="xsd:string" required="true">
+      <doc title="srvId" xml:lang="en">핀테크 서비스 코드</doc>
+    </param>
+  </representation>
+  <representation id="json.request.common.header" mediaType="application/json">
+    <doc title="json.request.common.header" xml:lang="en">오픈API 요청 공통정보 - 파트너</doc>
+    <param name="reqIdPlatform" type="xsd:string">
+      <doc title="reqIdPlatform" xml:lang="en">플랫폼에서 사용하는 메시지 구분자</doc>
+    </param>
+    <param name="reqIdConsumer" type="xsd:string">
+      <doc title="reqIdConsumer" xml:lang="en">핀테크 기업에서 사용하는 메시지 구분자</doc>
+    </param>
+    <param name="certDn" type="xsd:string">
+      <doc title="certDn" xml:lang="en">공인인증서 DN 정보</doc>
+    </param>
+    <param name="ci" type="xsd:string" required="true">
+      <doc title="ci" xml:lang="en">연계정보 88byte</doc>
+    </param>
+  </representation>
+  <representation id="json.vtAccountPortfolioRequest.body" mediaType="application/json">
+    <doc title="json.vtAccountPortfolioRequest.body" xml:lang="en">핀테크 서비스 Portal 회원 가입 여부 확인 바디</doc>
+    <param name="korName" type="xsd:string" required="true">
+      <doc title="korName" xml:lang="en">한글이름</doc>
+    </param>
+  </representation>
+  <representation id="json.memberVerificationResponse" mediaType="application/json">
+    <doc title="json.memberVerificationResponse" xml:lang="en">핀테크 서비스 Portal 회원 가입 여부 확인 결과</doc>
+    <param name="result" type="xsd:string" required="true">
+      <doc title="result" xml:lang="en">요청의 결과로 값은: member, nonMember</doc>
+    </param>
+  </representation>
+  <representation id="json.consentResponse" mediaType="application/json">
+    <doc title="json.consentResponse" xml:lang="en">허가된 가상계좌 목록</doc>
+    <param href="#json.vtAccount" name="vtAccList" required="true" repeating="true">
+      <doc title="vtAccList" xml:lang="en"></doc>
+    </param>
+  </representation>
+  <representation id="json.vtAccount" mediaType="application/json">
+    <doc title="json.vtAccount" xml:lang="en"></doc>
+    <param name="comId" type="xsd:string" required="true">
+      <doc title="comId" xml:lang="en">금융회사 코드</doc>
+    </param>
+    <param name="vtAccNo" type="xsd:string" required="true">
+      <doc title="vtAccNo" xml:lang="en">가상계좌번호</doc>
+    </param>
+    <param name="vtAccAlias" type="xsd:string">
+      <doc title="vtAccAlias" xml:lang="en">가상계좌번호 별칭</doc>
+    </param>
+  </representation>
+  <representation id="json.portfolioRequest" mediaType="application/json">
+    <doc title="json.portfolioRequest" xml:lang="en">자산 포트폴리오 조회 요청</doc>
+    <param href="#json.request.common.partner" name="partner" required="true">
+      <doc title="partner" xml:lang="en">오픈API 요청 공통정보 - 파트너</doc>
+    </param>
+    <param href="#json.request.common.header" name="commonHeader" required="true">
+      <doc title="commonHeader" xml:lang="en">오픈API 요청 공통정보 - 파트너</doc>
+    </param>
+    <param href="#json.request.common.deviceInfo" name="devInfo">
+      <doc title="devInfo" xml:lang="en">오픈API 요청 공통정보 - 단말정보</doc>
+    </param>
+    <param href="#json.portfolioRequestBody.body" name="body" required="true">
+      <doc title="body" xml:lang="en">핀테크 서비스 Portal 회원 가입 여부 확인 바디</doc>
+    </param>
+  </representation>
+  <representation id="json.request.common.deviceInfo" mediaType="application/json">
+    <doc title="json.request.common.deviceInfo" xml:lang="en">오픈API 요청 공통정보 - 단말정보</doc>
+    <param name="ipAddr" type="xsd:string" required="true">
+      <doc title="ipAddr" xml:lang="en">사용자 단말 IP주소</doc>
+    </param>
+    <param name="macAddr" type="xsd:string" required="true">
+      <doc title="macAddr" xml:lang="en">사용자 MAC 주소</doc>
+    </param>
+  </representation>
+  <representation id="json.portfolioRequestBody.body" mediaType="application/json">
+    <doc title="json.portfolioRequestBody.body" xml:lang="en">핀테크 서비스 Portal 회원 가입 여부 확인 바디</doc>
+    <param name="vtAccNo" type="xsd:string" required="true">
+      <doc title="vtAccNo" xml:lang="en">가상계좌번호</doc>
+    </param>
+    <param name="assetType" type="xsd:string" required="true">
+      <doc title="assetType" xml:lang="en">요청하는 자산유형이며 값은: CASH(현금), EQTY(주식), FUND(펀드),ETC(기타자산), ALL(전체)</doc>
+    </param>
+    <param name="rspType" type="xsd:string" required="true">
+      <doc title="rspType" xml:lang="en">응답 유형이며 값은: QTY(실잔고수량), RAT(잔고구성비율)</doc>
+    </param>
+  </representation>
+  <representation id="json.portfolioResponse" mediaType="application/json">
+    <doc title="json.portfolioResponse" xml:lang="en">자산 포트폴리오 조회 결과</doc>
+    <param href="#json.portfolio.equity" name="equityList" required="true" repeating="true">
+      <doc title="equityList" xml:lang="en"></doc>
+    </param>
+    <param href="#json.portfolio.fund" name="etcList" required="true" repeating="true">
+      <doc title="etcList" xml:lang="en"></doc>
+    </param>
+    <param href="#json.portfolio.etc" name="fundList" required="true" repeating="true">
+      <doc title="fundList" xml:lang="en"></doc>
+    </param>
+  </representation>
+  <representation id="json.portfolio.equity" mediaType="application/json">
+    <doc title="json.portfolio.equity" xml:lang="en"></doc>
+    <param name="assetType" type="xsd:string" required="true">
+      <doc title="assetType" xml:lang="en">상품구분자로 값은: KSP(코스피), KDQ(코스닥), ETF(ETF), FUT(선물), OPT(옵션), ELW(ELW), ETC(기타)</doc>
+    </param>
+    <param name="earningRate" type="xsd:float">
+      <doc title="earningRate" xml:lang="en">수익률 (소수점 2째자리까지)</doc>
+    </param>
+    <param name="isincode" type="xsd:string" required="true">
+      <doc title="isincode" xml:lang="en">ISINCODE(12)</doc>
+    </param>
+    <param name="qty" type="xsd:float" required="true">
+      <doc title="qty" xml:lang="en">수량 또는 비중(equity 내 비중, 소수점 2째자리까지)</doc>
+    </param>
+  </representation>
+  <representation id="json.portfolio.fund" mediaType="application/json">
+    <doc title="json.portfolio.fund" xml:lang="en"></doc>
+    <param name="earningRate" type="xsd:float">
+      <doc title="earningRate" xml:lang="en">수익률 (소수점 2째자리까지)</doc>
+    </param>
+    <param name="fundCode" type="xsd:string">
+      <doc title="fundCode" xml:lang="en">펀드표준코드</doc>
+    </param>
+    <param name="fundName" type="xsd:string">
+      <doc title="fundName" xml:lang="en">펀드명</doc>
+    </param>
+    <param name="maturity" type="xsd:string">
+      <doc title="maturity" xml:lang="en">만기일 YYYYMMDD</doc>
+    </param>
+    <param name="qty" type="xsd:float">
+      <doc title="qty" xml:lang="en">수량 또는 비중(fund 내 비중, 소수점 2째자리까지)</doc>
+    </param>
+  </representation>
+  <representation id="json.portfolio.etc" mediaType="application/json">
+    <doc title="json.portfolio.etc" xml:lang="en"></doc>
+    <param name="assetName" type="xsd:string">
+      <doc title="assetName" xml:lang="en">상품명</doc>
+    </param>
+    <param name="assetType" type="xsd:string" required="true">
+      <doc title="assetType" xml:lang="en">상품구분자로 값은: BOND(채권), CD, CP, DLS, ELS, STB(사채),CRP(약정식RP), RRP(수시RP), WRT(워런트)</doc>
+    </param>
+    <param name="earningRate" type="xsd:float">
+      <doc title="earningRate" xml:lang="en">수익률 (소수점 2째자리까지)</doc>
+    </param>
+    <param name="qty" type="xsd:integer">
+      <doc title="qty" xml:lang="en">수량 또는 비중(etc 내 비중, 소수점 2째자리까지)</doc>
+    </param>
+  </representation>
+  <representation id="json.balanceRequest" mediaType="application/json">
+    <doc title="json.balanceRequest" xml:lang="en">계좌잔고 조회 요청</doc>
+    <param href="#json.request.common.partner" name="partner" required="true">
+      <doc title="partner" xml:lang="en">오픈API 요청 공통정보 - 파트너</doc>
+    </param>
+    <param href="#json.request.common.header" name="commonHeader" required="true">
+      <doc title="commonHeader" xml:lang="en">오픈API 요청 공통정보 - 파트너</doc>
+    </param>
+    <param href="#json.request.common.deviceInfo" name="devInfo">
+      <doc title="devInfo" xml:lang="en">오픈API 요청 공통정보 - 단말정보</doc>
+    </param>
+    <param href="#json.portfolioRequestBody.body" name="body" required="true">
+      <doc title="body" xml:lang="en">핀테크 서비스 Portal 회원 가입 여부 확인 바디</doc>
+    </param>
+  </representation>
+  <representation id="json.balanceResponse" mediaType="application/json">
+    <doc title="json.balanceResponse" xml:lang="en">계좌잔고 조회 결과</doc>
+    <param href="#json.balance.summary" name="summary">
+      <doc title="summary" xml:lang="en">잔고 요약</doc>
+    </param>
+    <param href="#json.balance.equity" name="equityList" required="true" repeating="true">
+      <doc title="equityList" xml:lang="en"></doc>
+    </param>
+    <param href="#json.balance.fund" name="etcList" required="true" repeating="true">
+      <doc title="etcList" xml:lang="en"></doc>
+    </param>
+    <param href="#json.balance.etc" name="fundList" required="true" repeating="true">
+      <doc title="fundList" xml:lang="en"></doc>
+    </param>
+  </representation>
+  <representation id="json.balance.summary" mediaType="application/json">
+    <doc title="json.balance.summary" xml:lang="en">잔고 요약</doc>
+    <param name="cashAvWithdraw" type="xsd:integer">
+      <doc title="cashAvWithdraw" xml:lang="en">출금가능액</doc>
+    </param>
+    <param name="cashBalance" type="xsd:integer">
+      <doc title="cashBalance" xml:lang="en">현금잔고</doc>
+    </param>
+    <param name="substitute" type="xsd:integer">
+      <doc title="substitute" xml:lang="en">대용금</doc>
+    </param>
+    <param name="receivable" type="xsd:integer">
+      <doc title="receivable" xml:lang="en">미수/미납금</doc>
+    </param>
+    <param name="subsMargin" type="xsd:integer">
+      <doc title="subsMargin" xml:lang="en">대용증거금</doc>
+    </param>
+    <param name="loanCredit" type="xsd:integer">
+      <doc title="loanCredit" xml:lang="en">대출/신용금</doc>
+    </param>
+    <param name="valAtTrade" type="xsd:integer">
+      <doc title="valAtTrade" xml:lang="en">유가증권매수금액</doc>
+    </param>
+    <param name="valueAtCur" type="xsd:integer">
+      <doc title="valueAtCur" xml:lang="en">유가증권평가금액</doc>
+    </param>
+    <param name="proLoss" type="xsd:integer">
+      <doc title="proLoss" xml:lang="en">유가증권평가손익</doc>
+    </param>
+    <param name="totalAccVal" type="xsd:integer">
+      <doc title="totalAccVal" xml:lang="en">총평가금액</doc>
+    </param>
+  </representation>
+  <representation id="json.balance.equity" mediaType="application/json">
+    <doc title="json.balance.equity" xml:lang="en"></doc>
+    <param name="assetType" type="xsd:float">
+      <doc title="assetType" xml:lang="en">상품구분자로 값은: KDQ(코스닥),ETF(ETF),KSP(코스피),FUT(선물),OPT(옵션), ELW(ELW), ETC(기타)</doc>
+    </param>
+    <param name="isincode" type="xsd:string">
+      <doc title="isincode" xml:lang="en">ISINCODE(12)</doc>
+    </param>
+    <param name="qty" type="xsd:integer">
+      <doc title="qty" xml:lang="en">잔고수량</doc>
+    </param>
+    <param name="valAtTrade" type="xsd:integer">
+      <doc title="valAtTrade" xml:lang="en">매수금액</doc>
+    </param>
+    <param name="valAtCur" type="xsd:integer">
+      <doc title="valAtCur" xml:lang="en">평가금액</doc>
+    </param>
+    <param name="proLoss" type="xsd:integer">
+      <doc title="proLoss" xml:lang="en">평가손익</doc>
+    </param>
+    <param name="earningRate" type="xsd:integer">
+      <doc title="earningRate" xml:lang="en">수익률 (소수점 2째자리까지)</doc>
+    </param>
+  </representation>
+  <representation id="json.balance.fund" mediaType="application/json">
+    <doc title="json.balance.fund" xml:lang="en"></doc>
+    <param name="earningRate" type="xsd:float">
+      <doc title="earningRate" xml:lang="en">수익률 (소수점 2째자리까지)</doc>
+    </param>
+    <param name="firstDateBuy" type="xsd:string">
+      <doc title="firstDateBuy" xml:lang="en">최초매수일(YYYYMMDD)</doc>
+    </param>
+    <param name="fundCode" type="xsd:string">
+      <doc title="fundCode" xml:lang="en">펀드표준코드</doc>
+    </param>
+    <param name="fundName" type="xsd:string">
+      <doc title="fundName" xml:lang="en">펀드이름</doc>
+    </param>
+    <param name="lastDateBuy" type="xsd:string">
+      <doc title="lastDateBuy" xml:lang="en">최종매수일(YYYYMMDD)</doc>
+    </param>
+    <param name="maturity" type="xsd:string">
+      <doc title="maturity" xml:lang="en">만기일(YYYYMMDD)</doc>
+    </param>
+    <param name="proLoss" type="xsd:integer">
+      <doc title="proLoss" xml:lang="en">평가손익</doc>
+    </param>
+    <param name="valAtCur" type="xsd:integer">
+      <doc title="valAtCur" xml:lang="en">평가금액</doc>
+    </param>
+    <param name="valAtTrade" type="xsd:integer">
+      <doc title="valAtTrade" xml:lang="en">매수금액</doc>
+    </param>
+  </representation>
+  <representation id="json.balance.etc" mediaType="application/json">
+    <doc title="json.balance.etc" xml:lang="en"></doc>
+    <param name="assetType" type="xsd:string">
+      <doc title="assetType" xml:lang="en">상품구분자로 값은: BOND(채권), CD, CP,DLS, ELS, STB(사채), CRP(약정식RP),
+RRP(수시RP), WRT(워런트)</doc>
+    </param>
+    <param name="earningRate" type="xsd:float">
+      <doc title="earningRate" xml:lang="en">수익률 (소수점 2째자리까지)</doc>
+    </param>
+    <param name="assetName" type="xsd:string">
+      <doc title="assetName" xml:lang="en">상품명</doc>
+    </param>
+    <param name="qty" type="xsd:float">
+      <doc title="qty" xml:lang="en">수량/비중</doc>
+    </param>
+    <param name="valueAtCur" type="xsd:integer">
+      <doc title="valueAtCur" xml:lang="en">평가금액</doc>
+    </param>
+    <param name="valAtTrade" type="xsd:integer">
+      <doc title="valAtTrade" xml:lang="en">매수금액</doc>
+    </param>
+  </representation>
+  <representation id="json.transactionRequest" mediaType="application/json">
+    <doc title="json.transactionRequest" xml:lang="en">거래내역 조회 요청</doc>
+    <param href="#json.request.common.partner" name="partner" required="true">
+      <doc title="partner" xml:lang="en">오픈API 요청 공통정보 - 파트너</doc>
+    </param>
+    <param href="#json.request.common.header" name="commonHeader" required="true">
+      <doc title="commonHeader" xml:lang="en">오픈API 요청 공통정보 - 파트너</doc>
+    </param>
+    <param href="#json.request.common.deviceInfo" name="devInfo">
+      <doc title="devInfo" xml:lang="en">오픈API 요청 공통정보 - 단말정보</doc>
+    </param>
+    <param href="#json.transactionRequestBody.body" name="body" required="true">
+      <doc title="body" xml:lang="en">핀테크 서비스 거래내역 조회 바디</doc>
+    </param>
+  </representation>
+  <representation id="json.transactionRequestBody.body" mediaType="application/json">
+    <doc title="json.transactionRequestBody.body" xml:lang="en">핀테크 서비스 거래내역 조회 바디</doc>
+    <param name="vtAccNo" type="xsd:string" required="true">
+      <doc title="vtAccNo" xml:lang="en">가상계좌번호</doc>
+    </param>
+    <param href="#json.request.transaction.query" name="queryPrams" required="true">
+      <doc title="queryPrams" xml:lang="en">오픈API 요청 공통정보 - 조회조건</doc>
+    </param>
+  </representation>
+  <representation id="json.request.transaction.query" mediaType="application/json">
+    <doc title="json.request.transaction.query" xml:lang="en">오픈API 요청 공통정보 - 조회조건</doc>
+    <param name="fromDate" type="xsd:string">
+      <doc title="fromDate" xml:lang="en">조회시작날짜(YYYYMMDD)</doc>
+    </param>
+    <param name="toDate" type="xsd:string">
+      <doc title="toDate" xml:lang="en">조회종료날짜(YYYYMMDD)</doc>
+    </param>
+    <param name="isinCode" type="xsd:string">
+      <doc title="isinCode" xml:lang="en">조회조건: 종목코드</doc>
+    </param>
+    <param name="side" type="xsd:string">
+      <doc title="side" xml:lang="en">조회조건으로 값은: BID(매도), ASK(매수)</doc>
+    </param>
+    <param name="count" type="xsd:string">
+      <doc title="count" xml:lang="en">응답별 건수 (default는 50) 0이면 50건과 동일</doc>
+    </param>
+    <param name="page" type="xsd:string">
+      <doc title="page" xml:lang="en">응답데이터의 특정 지점을 지정할 경우, 처음은 0으로 설정</doc>
+    </param>
+  </representation>
+  <representation id="json.transactionResponse" mediaType="application/json">
+    <doc title="json.transactionResponse" xml:lang="en">거래내역 조회 결과</doc>
+    <param href="#json.transaction" name="transList" required="true" repeating="true">
+      <doc title="transList" xml:lang="en"></doc>
+    </param>
+  </representation>
+  <representation id="json.transaction" mediaType="application/json">
+    <doc title="json.transaction" xml:lang="en"></doc>
+    <param name="isincode" type="xsd:string">
+      <doc title="isincode" xml:lang="en">종목코드</doc>
+    </param>
+    <param name="changeAmt" type="xsd:integer">
+      <doc title="changeAmt" xml:lang="en">금액증감 (매도/매수/이체에 따른 금액변동)</doc>
+    </param>
+    <param name="changeQty" type="xsd:integer">
+      <doc title="changeQty" xml:lang="en">수량증감 (매도/매수량, 이체 시는 0)</doc>
+    </param>
+    <param name="qty" type="xsd:integer">
+      <doc title="qty" xml:lang="en">잔고수량 (거래 후 잔량)</doc>
+    </param>
+    <param name="transDate" type="xsd:string">
+      <doc title="transDate" xml:lang="en">거래일자 (YYYYMMDD)</doc>
+    </param>
+    <param name="transType" type="xsd:string">
+      <doc title="transType" xml:lang="en">거래구분이며 값은: BID(매도), ASK(매수),DEP(이체입금), WID(이체출금)</doc>
+    </param>
+  </representation>
+  <representation id="json.interestRequest" mediaType="application/json">
+    <doc title="json.interestRequest" xml:lang="en">관심종목 조회 요청</doc>
+    <param href="#json.request.common.partner" name="partner" required="true">
+      <doc title="partner" xml:lang="en">오픈API 요청 공통정보 - 파트너</doc>
+    </param>
+    <param href="#json.request.common.header" name="commonHeader" required="true">
+      <doc title="commonHeader" xml:lang="en">오픈API 요청 공통정보 - 파트너</doc>
+    </param>
+    <param href="#json.request.common.deviceInfo" name="devInfo">
+      <doc title="devInfo" xml:lang="en">오픈API 요청 공통정보 - 단말정보</doc>
+    </param>
+    <param href="#json.request.common.body" name="body" required="true">
+      <doc title="body" xml:lang="en">핀테크 서비스 Portal 회원 가입 여부 확인 바디</doc>
+    </param>
+  </representation>
+  <representation id="json.request.common.body" mediaType="application/json">
+    <doc title="json.request.common.body" xml:lang="en">핀테크 서비스 Portal 회원 가입 여부 확인 바디</doc>
+    <param name="vtAccNo" type="xsd:string" required="true">
+      <doc title="vtAccNo" xml:lang="en">가상계좌번호</doc>
+    </param>
+  </representation>
+  <representation id="json.interestResponse" mediaType="application/json">
+    <doc title="json.interestResponse" xml:lang="en">관심종목조회 결과</doc>
+    <param href="#json.group" name="groupList" required="true" repeating="true">
+      <doc title="groupList" xml:lang="en"></doc>
+    </param>
+  </representation>
+  <representation id="json.group" mediaType="application/json">
+    <doc title="json.group" xml:lang="en"></doc>
+    <param name="isincode" type="xsd:string" repeating="true">
+      <doc title="isincode" xml:lang="en">종목코드</doc>
+    </param>
+    <param name="groupName" type="xsd:string">
+      <doc title="groupName" xml:lang="en">관심종목 그룹 이름</doc>
+    </param>
+    <param name="modifyDate" type="xsd:string">
+      <doc title="modifyDate" xml:lang="en">최종 수정일</doc>
+    </param>
+  </representation>
+</application>
